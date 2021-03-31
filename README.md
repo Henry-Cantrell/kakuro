@@ -5,7 +5,7 @@ A simple Python puzzle solver for 3x3 board sizes. Kakuro is a popular Japanese 
 
 ## What this program does:
 
-This Python program solves 3x3 Kakuro puzzles. It intelligently generates legal boards and also uses an intelligent process to solve its generated boards. Nothing has been hardcoded pertaining to board selection and computer solutions; simple algorithms handle those processes instead. 
+This Python program solves 3x3 Kakuro puzzles. It intelligently generates solvable boards and also uses an intelligent process to legally solve said boards. Nothing has been hardcoded pertaining to board selection and computer solutions; simple algorithms handle those processes instead. 
  
 ## Rules of Kakuro:
  
