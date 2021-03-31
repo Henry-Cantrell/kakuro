@@ -21,3 +21,6 @@ Once these conditions have been fulfilled for all 4 top numbers and lefthand num
 
 These conditions create some overlap between the selected player choice numbers. The challenge of the game for the player is accordingly to select numbers that fulfill the win conditions, while not selecting the same numbers for a single sum. So, the same player choice number is actually permitted to be used twice, so long as it has a diagonal relationship (not used in the same sum) to the other player choice numbers.
  
+## What I learned/reflections:
+
+This was my first project in Python! As a result of my efforts on this project, I developed an elementary understanding of Python's syntax and capabilities over the course of this project. I also found myself thinking in new ways about how to enhance my code's readability. Additionally, developing the board generation and board solving abilities of this program, with no form of outside guidance, pushed me to my creative limits and helped me to see outside the box with some trickier logic. 
