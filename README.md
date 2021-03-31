@@ -23,4 +23,4 @@ These conditions create some overlap between the selected player choice numbers.
  
 ## What I learned/reflections:
 
-This was my first project in Python! As a result of my efforts on this project, I developed an elementary understanding of Python's syntax and capabilities over the course of this project. I also found myself thinking in new ways about how to enhance my code's readability. Additionally, developing the board generation and board solving abilities of this program, with no form of outside guidance, pushed me to my creative limits and helped me to see outside the box with some trickier logic. 
+This was my first project in Python! As a result of my efforts on this project, I developed an elementary understanding of Python's syntax and capabilities over the course of this project. I also found myself thinking in new ways about how to enhance my code's readability, especially with keeping my functions simple and discrete. Additionally, developing the board generation and board solving abilities of this program, with no form of outside guidance, pushed me to my creative limits and helped me to see outside the box with some trickier logic. 
