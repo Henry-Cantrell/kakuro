@@ -10,6 +10,8 @@ This Python program solves 3x3 Kakuro puzzles. It intelligently generates legal 
 ## Rules of Kakuro:
  
 To win a game of Kakuro, there are several conditions that must be met. This program happens to use 3x3 sized boards, so the win conditions and rules for a 3x3 board will be described.
+
+There are two numbers horizontally placed on the top of the board that the player must select to fulfill. Then, there are two vertically oriented numbers on the left side of the board that the player must consider as well. The player has 4 spaces in which to select numbers from the legal range (1-9).
  
 Firstly, the two numbers directly below a top number must sum to the top number. 
 
