@@ -1,7 +1,7 @@
 # kakuro
  A simple Python puzzle solver.
  
- #Rules of Kakuro:
+ Rules of Kakuro:
  
  Kakuro is a popular Japanese puzzle game. 
  To win a game of Kakuro, there are several conditions that must be met. 
