@@ -1,15 +1,14 @@
 #Execute the program from this file. 
 
-from gm_dictionary import *
+from gm_dictionary import game_master_dict as gmDict
 from generate_legal_positions import *
-from winning_nums_test import *
-from winning_conds_dict import *
+from pick_choices import *
+from choice_select_list import *
 
-def gameFlow(gmDict, winningConditionsDict):
-	legalPositionsSelect(gmDict)
-	selectWinningNums(gmDict, winningConditionsDict, )
+legalPositionsSelect(gmDict)
+selectChoices(gmDict, selectionsDictionary)
 	
-gameFlow(game_master_dict, winningConditionsDict)
+
 	
 
 

@@ -1,3 +1,5 @@
+#Outdated procedure, consider for discard.
+
 from gm_dictionary import *
 
 winningConditionsDict = {

@@ -1,0 +1,4 @@
+selectionsDictionary={
+'solutionListTopLeft' : [],
+'solutionListTopRight' : [],
+}

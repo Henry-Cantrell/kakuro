@@ -1,35 +1,31 @@
-#Psuedocode
+from determine_if_choices_win import *
 
-#Check solutions in build_choice_list
-#So, topLeft are 0, 2 in gmDict for 0, 1 and topRight are 1, 3 in gmDict for 2, 3 for indexes in winning_conds_dict dictionary choices list
-#Check against determine_if_choices_win func
-#If failed, discard first index of topLeft and topRight into respective lists and continue with next choice
+def selectChoices(gmDict, selectionsDictionary):
 
-def selectChoices(gmDict):
-	selectionsDictionary={
-	'discardListTopRight' : [],
-	'discardListTopLeft' : [],
-	'solutionListTopRight' : [],
-	'solutionListTopLeft' : [],
-	'numbersOne' : [],
-	'numbersTwo' : []
-	}
+	#This generates possible solutions based on whether the columns add to the tl/tr values of the positional list
 
-	def createAndSortChoices(selectionsDictionary, gmDict):
-		selectionsDictionary['numbersOne'] = list(range(1, 10))
-		selectionsDictionary['numbersTwo'] = list(range(1, 10))
+	for x in range(1, 10):
+		for y in range(1,10):
+			if x + y == gmDict['positional_list'][0]:
+				selectionsDictionary['solutionListTopLeft'].append([x, y])
+			elif x + y == gmDict['positional_list'][1]:
+				selectionsDictionary['solutionListTopRight'].append([x, y])
 
-		for i in selectionsDictionary['numbersOne']:
-			for n in selectionsDictionary['numbersTwo']:
-				if i + n == gmDict['positional_list'][0]:
-					selectionsDictionary['solutionListTopLeft'].append([i, n])
-				elif i + n == gmDict['positional_list'][1]:
-					selectionsDictionary['solutionListTopRight'].append([i, n])
-	
-	createAndSortChoices(selectionsDictionary, gmDict)
+	for i in selectionsDictionary['solutionListTopLeft']:
+		for n in selectionsDictionary['solutionListTopRight']:
+			if winnerEval(i, n, gmDict):
+				gmDict['choices_list'][0] = i[0]
+				gmDict['choices_list'][1] = n[0]
+				gmDict['choices_list'][2] = i[1]
+				gmDict['choices_list'][3] = n[1]
+				print('The computer choices: ')
+				print(gmDict['choices_list'])
 
-	#gmDict['choices_list'].append(selectionsDictionary['solutionListTopRight'][0])
-	#gmDict['choices_list'].append(selectionsDictionary)['solutionListTopRight'][2])
-	#gmDict['choices_list'].append(selectionsDictionary['solutionListTopLeft'][1])
-	#gmDict['choices_list'].append(selectionsDictionary)['solutionListTopLeft'][3])
+	print('Here is the sl/tl: ')
+	print(selectionsDictionary['solutionListTopLeft'])
+
+	print('Here is the sl/tr: ')
+	print(selectionsDictionary['solutionListTopRight'])
+
+
 

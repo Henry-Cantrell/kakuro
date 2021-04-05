@@ -1,22 +1,22 @@
-#These conds need to be redone to simply calc quantity
+#0 is a top column position, while 1 is a bottomn column position, out of a column of height 2
 
-def winnerEval(winningConditionsDict):
+def winnerEval(leftColumnPos, rightColumnPos, gmDict):
 
-	top_left_satisfied = winningConditionsDict['top_left_choice'] + winningConditionsDict['bottom_left_choice'] == winningConditionsDict['top_left_position']
+	top_left_satisfied = leftColumnPos[0] + leftColumnPos[1] == gmDict['positional_list'][0]
 
-	top_right_satisfied = winningConditionsDict['top_right_choice'] + winningConditionsDict['bottom_right_choice'] == winningConditionsDict['top_right_position']
+	top_right_satisfied = rightColumnPos[0] + rightColumnPos[1] == gmDict['positional_list'][1]
 
-	left_top_satisfied = winningConditionsDict['top_left_choice'] + winningConditionsDict['top_right_choice'] == winningConditionsDict['left_top_position']
+	left_top_satisfied = leftColumnPos[0] + rightColumnPos[0] == gmDict['positional_list'][2]
 
-	left_bottom_satisfied = winningConditionsDict['bottom_left_choice'] + winningConditionsDict['bottom_right_choice'] == winningConditionsDict['left_bottom_position']
+	left_bottom_satisfied = leftColumnPos[1] + rightColumnPos[1] == gmDict['positional_list'][3]
 
-	no_illegal_top_left_vertical = (winningConditionsDict['top_left_choice']/2) != winningConditionsDict['top_left_position'] 
+	no_illegal_top_left_vertical = leftColumnPos[0] != leftColumnPos[1]
 
-	no_illegal_top_left_horizontal = (winningConditionsDict['top_left_choice']/2) != winningConditionsDict['left_top_position'] 
+	no_illegal_top_left_horizontal = rightColumnPos[0] != rightColumnPos[1]
 
-	no_illegal_top_right_vertical = (winningConditionsDict['top_right_choice']/2) != winningConditionsDict['top_right_position']
+	no_illegal_top_right_vertical = leftColumnPos[0] != rightColumnPos[0]
 
-	no_illegal_bottom_left_horizontal = (winningConditionsDict['top_right_choice']/2) != winningConditionsDict['top_right_position']
+	no_illegal_bottom_left_horizontal = leftColumnPos[1] != rightColumnPos[1]
 
 	no_illegal_choices = no_illegal_bottom_left_horizontal and no_illegal_top_left_horizontal and no_illegal_top_left_vertical and no_illegal_top_right_vertical
 
@@ -27,4 +27,3 @@ def winnerEval(winningConditionsDict):
 	else:
 		return False
 
-#To-do list:
