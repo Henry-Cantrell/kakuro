@@ -5,7 +5,7 @@ A simple Python puzzle solver for 3x3 board sizes. Kakuro is a popular Japanese 
 
 ## What this program does:
 
-This Python program solves 3x3 Kakuro puzzles. It intelligently generates solvable boards and also uses an intelligent process to legally solve said boards. Nothing has been hardcoded pertaining to board selection and computer solutions; simple algorithms handle those processes instead. 
+This Python program solves 3x3 Kakuro puzzles. It uses simple algorithms to generate boards and then solve them. Nothing has been hardcoded pertaining to board selection and computer solutions; algorithms handle those processes instead. 
  
 ## Rules of Kakuro:
  
@@ -13,9 +13,9 @@ To win a game of Kakuro, there are several conditions that must be met. This pro
 
 There are two numbers horizontally placed on the top of the board that the player must select to fulfill. Then, there are two vertically oriented numbers on the left side of the board that the player must consider as well. The player has 4 spaces in which to select numbers from the legal range (1-9).
  
-Firstly, the two numbers directly below a top number must sum to the top number. 
+Firstly, the two numbers in a column directly below a top number must sum to the top number. 
 
-Then, the two numbers preceding a side number must sum to that side number. 
+Then, the two numbers in a row adjacent to a side number must sum to that side number. 
 
 Once these conditions have been fulfilled for all 4 top numbers and lefthand numbers, the game is legally won.
 
@@ -27,4 +27,4 @@ This was my first project in Python! As a result of my efforts on this project, 
 
 ## Install instructions:
 
-Just run the kakuro.py file.
+Just run the kakuro.py file after locally downloading the repo. Output is currently constrained to the console, but there are future plans for the implementation of a GUI.
